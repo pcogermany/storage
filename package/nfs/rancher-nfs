@@ -6,6 +6,9 @@ elif [ -e "$(dirname $0)/../common/common.sh" ]; then
     source $(dirname $0)/../common/common.sh
 fi
 
+rpcbind
+rpc.statd
+
 mount_nfs() {
     local host=$1
     local exportDir=$2
